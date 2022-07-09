@@ -4,7 +4,7 @@ import { useAddress, useMetamask } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import Listings from "../components/Listings";
 const style = {
-  wrapper: `flex flex-col dark:bg-[#202226] relative h-screen bg-gray-100`,
+  wrapper: `flex flex-col mx-auto dark:bg-[#202226] relative h-full bg-gray-100`,
   btnPrimary: `border border-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-900 hover:text-gray-100`,
 };
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   const auth = () => {
     return (
-      <div>
+      <div className="flex justify-center items-center h-screen">
         <button
           onClick={connectWithMetamask}
           className={style.btnPrimary}
